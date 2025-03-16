@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("test jenkins") {
         steps {
-            echo "hello ${name} from ${country}"
+            sh " echo hello ${name} from ${country}"
         }
         }
     }
