@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        name="mina"
-        country="egypt"
+        name = credentials("name")
+        country ="egypt"
     }
 
 
