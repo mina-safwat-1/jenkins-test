@@ -8,8 +8,16 @@ pipeline {
 
     stages {
         stage("test jenkins") {
+
+
+        
+    
         steps {
-            sh " echo hello ${name} from ${country}"
+            
+            withCredentials([usernamePassword(credentialsId: 'jenkins', usernameVariable: 'name', passwordVariable: 'password')]) {
+                sh "echo ${name} ${password}"
+
+            }
         }
         }
     }
